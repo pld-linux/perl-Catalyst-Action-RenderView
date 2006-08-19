@@ -5,15 +5,15 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Catalyst
 %define	pnam	Action-RenderView
-Summary:	Catalyst::Action::RenderView - Sensible default end action.
-#Summary(pl):	
+Summary:	Catalyst::Action::RenderView - sensible default end action
+Summary(pl):	Catalyst::Action::RenderView - sensowna domy¶lna akcja koñcowa
 Name:		perl-Catalyst-Action-RenderView
 Version:	0.04
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/M/MR/MRAMBERG/Catalyst-Action-RenderView-0.04.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/M/MR/MRAMBERG/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	95f0e438c073efa5e0930eda00304136
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -24,16 +24,22 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This action implements a sensible default end action, which will forward
-to the first available view, unless status is set to 3xx, or there is a
-response body. It also allows you to pass dump_info=1 to the url in
-order to force a debug screen, while in debug mode.
+This action implements a sensible default end action, which will
+forward to the first available view, unless status is set to 3xx, or
+there is a response body. It also allows you to pass dump_info=1 to
+the URL in order to force a debug screen, while in debug mode.
 
 If you have more than one view, you can specify which one to use with
-the default_view config setting (see Catalyst/"$c-view($name)">.)
+the default_view config setting.
 
-# %description -l pl
-# TODO
+%description -l pl
+Ta akcja implementuje sensown± domy¶ln± akcjê koñcow±, przekazuj±c±
+pierwszy dostêpny widok, chyba ¿e status jest ustawiony na 3xx lub
+nie ma cia³a odpowiedzi. Pozwala tak¿e przekazaæ dump_info=1 do
+URL-a, aby wymusiæ ekran ¶ledzenia w przypadku trybu ¶ledzenia.
+
+Je¶li jest wiêcej ni¿ jeden widok, mo¿na podaæ który ma byæ
+wykorzystany przy u¿yciu ustawienia konfiguracyjnego default_view.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
