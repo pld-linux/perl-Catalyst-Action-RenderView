@@ -6,7 +6,7 @@
 %define	pdir	Catalyst
 %define	pnam	Action-RenderView
 Summary:	Catalyst::Action::RenderView - sensible default end action
-Summary(pl.UTF-8):   Catalyst::Action::RenderView - sensowna domyślna akcja końcowa
+Summary(pl.UTF-8):	Catalyst::Action::RenderView - sensowna domyślna akcja końcowa
 Name:		perl-Catalyst-Action-RenderView
 Version:	0.04
 Release:	1
