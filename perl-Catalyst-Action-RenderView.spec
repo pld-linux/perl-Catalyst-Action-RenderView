@@ -6,7 +6,7 @@
 %define	pdir	Catalyst
 %define	pnam	Action-RenderView
 Summary:	Catalyst::Action::RenderView - sensible default end action
-Summary(pl):	Catalyst::Action::RenderView - sensowna domy¶lna akcja koñcowa
+Summary(pl.UTF-8):   Catalyst::Action::RenderView - sensowna domyÅ›lna akcja koÅ„cowa
 Name:		perl-Catalyst-Action-RenderView
 Version:	0.04
 Release:	1
@@ -32,14 +32,14 @@ the URL in order to force a debug screen, while in debug mode.
 If you have more than one view, you can specify which one to use with
 the default_view config setting.
 
-%description -l pl
-Ta akcja implementuje sensown± domy¶ln± akcjê koñcow±, przekazuj±c±
-pierwszy dostêpny widok, chyba ¿e status jest ustawiony na 3xx lub
-nie ma cia³a odpowiedzi. Pozwala tak¿e przekazaæ dump_info=1 do
-URL-a, aby wymusiæ ekran ¶ledzenia w przypadku trybu ¶ledzenia.
+%description -l pl.UTF-8
+Ta akcja implementuje sensownÄ… domyÅ›lnÄ… akcjÄ™ koÅ„cowÄ…, przekazujÄ…cÄ…
+pierwszy dostÄ™pny widok, chyba Å¼e status jest ustawiony na 3xx lub
+nie ma ciaÅ‚a odpowiedzi. Pozwala takÅ¼e przekazaÄ‡ dump_info=1 do
+URL-a, aby wymusiÄ‡ ekran Å›ledzenia w przypadku trybu Å›ledzenia.
 
-Je¶li jest wiêcej ni¿ jeden widok, mo¿na podaæ który ma byæ
-wykorzystany przy u¿yciu ustawienia konfiguracyjnego default_view.
+JeÅ›li jest wiÄ™cej niÅ¼ jeden widok, moÅ¼na podaÄ‡ ktÃ³ry ma byÄ‡
+wykorzystany przy uÅ¼yciu ustawienia konfiguracyjnego default_view.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
