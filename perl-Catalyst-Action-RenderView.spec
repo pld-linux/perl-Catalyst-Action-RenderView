@@ -8,19 +8,19 @@
 Summary:	Catalyst::Action::RenderView - sensible default end action
 Summary(pl.UTF-8):	Catalyst::Action::RenderView - sensowna domyślna akcja końcowa
 Name:		perl-Catalyst-Action-RenderView
-Version:	0.04
+Version:	0.07
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	95f0e438c073efa5e0930eda00304136
+# Source0-md5:	649a25e729a02c9e59bee06e9c55b8de
 URL:		http://search.cpan.org/dist/Catalyst-Action-RenderView/
-BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Catalyst >= 5.7
+BuildRequires:	perl-Data-Visitor >= 0.08
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -47,17 +47,17 @@ wykorzystany przy użyciu ustawienia konfiguracyjnego default_view.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
+%{__perl} -MExtUtils::MakeMaker -we 'WriteMakefile(NAME=>"Catalyst::Action::RenderView")' \
+	INSTALLDIRS=vendor
+%{__make}
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} pure_install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
