@@ -8,13 +8,13 @@
 Summary:	Catalyst::Action::RenderView - sensible default end action
 Summary(pl.UTF-8):	Catalyst::Action::RenderView - sensowna domyślna akcja końcowa
 Name:		perl-Catalyst-Action-RenderView
-Version:	0.13
+Version:	0.16
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	49144fd677f39e8e8ad5455fa4f647a6
+# Source0-md5:	ed0ce5d8e57fef806938bf904862a2cd
 URL:		http://search.cpan.org/dist/Catalyst-Action-RenderView/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
