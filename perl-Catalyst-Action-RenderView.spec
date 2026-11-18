@@ -7,19 +7,20 @@
 Summary:	Catalyst::Action::RenderView - sensible default end action
 Summary(pl.UTF-8):	Catalyst::Action::RenderView - sensowna domyślna akcja końcowa
 Name:		perl-Catalyst-Action-RenderView
-Version:	0.16
+Version:	0.17
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ed0ce5d8e57fef806938bf904862a2cd
-URL:		http://search.cpan.org/dist/Catalyst-Action-RenderView/
+Source0:	https://www.cpan.org/modules/by-module/Catalyst/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	10db546ae9870acd53e43cef21af71ca
+URL:		https://metacpan.org/dist/Catalyst-Action-RenderView
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Catalyst >= 5.7
-BuildRequires:	perl-Data-Visitor >= 0.08
+BuildRequires:	perl-Catalyst >= 5.80030
+BuildRequires:	perl-Data-Visitor >= 0.24
+BuildRequires:	perl-MRO-Compat
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -46,7 +47,7 @@ wykorzystany przy użyciu ustawienia konfiguracyjnego default_view.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} -MExtUtils::MakeMaker -we 'WriteMakefile(NAME=>"Catalyst::Action::RenderView")' \
+%{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
 
